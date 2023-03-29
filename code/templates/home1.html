@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<!--
+	Minimaxing by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+	<head>
+		<title>CoLamFe</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='js/breakpoints.min.js') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='js/browser.min.js') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='js/jquery.min.js') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='js/main.js') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='js/util.js') }}" />
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+		</style>
+	</head>
+
+	<body>
+		<div id="page-wrapper">
+			<!-- Header -->
+			<div id="header-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<header id="header">
+								<h1><a onclick="window.location.href='/home'" id="logo">CoLamfe</a></h1>
+								<nav id="nav">
+									<a onclick="window.location.href='/introduce'" id="introduce">팀원소개</a>
+									<a onclick="window.location.href='/Services'" id="service">서비스</a>
+								</nav>
+							</header>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Banner -->
+			<div id="banner-wrapper">
+				<div class="container">
+					<h2 class="m13">세상의 모든 AI</h2>
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+					<script>
+						var textWrapper = document.querySelector('.m13');
+						textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+						anime.timeline({ loop: true })
+							.add({
+								targets: '.m13 .letter',
+								opacity: [0, 1],
+								easing: "easeInOutQuad",
+								duration: 2250,
+								delay: (el, i) => 150 * (i + 1)
+							}).add({
+								targets: '.m13',
+								opacity: 0,
+								duration: 1000,
+								easing: "easeOutExpo",
+								delay: 1000
+							});
+					</script>
+					<span id="text-span">당신의 업종에 AI기술을 적용하고 싶나요?</span>
+					<span id="text-span">세모AI를 사용해보세요</span>
+					<p></p>
+					<footer class="controls">
+						<a onclick="location.href='Services.html'" class="button3" style="cursor:pointer">서비스 이용하기</a>
+						<b class="backgroundHover"></b>
+					</footer>
+				</div>
+			</div>
+			<!-- Main -->
+
+	
+					<!-- Scripts -->
+					<script src="static/js/jquery.min.js"></script>
+					<script src="static/js/browser.min.js"></script>
+					<script src="static/js/breakpoints.min.js"></script>
+					<script src="static/js/util.js"></script>
+					<script src="static/js/main.js"></script>
+
+	</body>
+
+</html>
